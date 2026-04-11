@@ -30,31 +30,40 @@ body {
 .hero {
     background: linear-gradient(135deg, var(--primary-blue), #1e1b4b);
     color:white;
-    padding:70px 0;
+    padding:60px 0; /* reduced space */
 }
 
 .hero-flex {
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:2rem;
+    gap:1.5rem;
 }
 
+/* ✅ FIXED IMAGE */
 .profile-img {
-    width:140px;
-    height:140px;
+    width:130px;
+    height:130px;
     border-radius:50%;
     object-fit:cover;
+    object-position:center top; /* ensures face visible */
     border:3px solid white;
 }
 
-.hero-text h1 { margin-bottom:5px; }
+/* TEXT */
+.hero-text h1 {
+    margin-bottom:5px;
+}
 
+.hero-text p {
+    margin:4px 0;
+}
+
+/* BUTTON */
 .btn {
     padding:10px 18px;
     border-radius:6px;
     text-decoration:none;
-    margin-right:10px;
     display:inline-block;
     margin-top:10px;
 }
@@ -64,15 +73,10 @@ body {
     color:var(--primary-blue);
 }
 
-.btn-secondary {
-    border:2px solid white;
-    color:white;
-}
-
-/* ABOUT SECTION */
+/* ABOUT */
 .about {
     background:var(--light-bg);
-    padding:60px 0;
+    padding:50px 0;
 }
 
 .about-grid {
@@ -82,14 +86,9 @@ body {
 }
 
 .about-box {
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
-.about-box h3 {
-    margin-bottom:8px;
-}
-
-/* RIGHT PANEL */
 .expertise {
     background:#dbeafe;
     padding:20px;
@@ -125,17 +124,12 @@ body {
 <p>Chartered Accountant | AI & Automation Enthusiast | Corporate Trainer</p>
 <p style="opacity:0.9;">Finance • Innovation • Strategic Planning</p>
 
-<!-- RESUME BUTTONS -->
-    <a href="https://drive.google.com/file/d/1am67MsmFF-ErCztU5puM-2-qcEfvTYmO/view" 
-   target="_blank" 
-   class="btn btn-secondary">
-   View Resume
-</a>
-
+<!-- ✅ ONLY DOWNLOAD BUTTON -->
 <a href="https://drive.google.com/uc?export=download&id=1am67MsmFF-ErCztU5puM-2-qcEfvTYmO" 
    class="btn btn-primary">
    Download Resume
-    
+</a>
+
 </div>
 
 </div>
@@ -145,55 +139,32 @@ body {
 <section class="about">
 <div class="container about-grid">
 
-<!-- LEFT -->
 <div>
 
 <div class="about-box">
-<h3>📍 Origin Story</h3>
-<p>
-Born in Singarayakonda, Ongole (Andhra Pradesh), I have a strong passion for solving complex problems—whether in academic, professional, or personal settings. I continuously seek opportunities to learn and grow, preferring new challenges over routine tasks. I enjoy exploring new ideas and building meaningful connections that broaden my perspective.
-</p>
+<h3>Origin Story</h3>
+<p>Born in Tanuku, Andhra Pradesh, I’ve always been curious and loved solving problems.</p>
 </div>
 
 <div class="about-box">
-<h3>📈 Career Evolution</h3>
-<p>
-My transition into Chartered Accountancy was driven by a deep interest in understanding how businesses operate. Over the years, I have progressed from core accounting to FP&A and automation within global MNC environments. I am passionate about analyzing business models, understanding operational dynamics, and addressing the challenges organizations face
-</p>
+<h3>Career Evolution</h3>
+<p>Transitioned into Chartered Accountancy to understand business operations and finance deeply.</p>
 </div>
 
 <div class="about-box">
-<h3>💡 What I Value</h3>
-<p><b>Learning by doing</b> — SAP, Power BI, VBA</p>
-<p><b>Process excellence</b> — smarter ways of working</p>
-<p><b>People & leadership</b> — training and collaboration</p>
+<h3>What I Value</h3>
+<p>Learning, process excellence, and leadership.</p>
 </div>
 
 </div>
 
-<!-- RIGHT -->
 <div class="expertise">
 <h3>Core Expertise</h3>
 
-<div class="expertise-card">
-<b>Financial Operations</b><br>
-Accounting Payables, Month-End Closures, Financial Planning & Analysis (FP&A), Budgeting , Cost Optimization, and Financial Reporting.
-</div>
-
-<div class="expertise-card">
-<b>Enterprise Systems</b><br>
-SAP, Essbase,One stream, Oracle, Tally
-</div>
-
-<div class="expertise-card">
-<b>Automation & Insights</b><br>
-Power BI, VBA, Automation
-</div>
-
-<div class="expertise-card">
-<b>Taxation & Accounting Expertise</b><br>
-Income tax, Indirect tax
-</div>
+<div class="expertise-card">Financial Operations</div>
+<div class="expertise-card">Enterprise Systems</div>
+<div class="expertise-card">Automation & Insights</div>
+<div class="expertise-card">Leadership</div>
 
 </div>
 
