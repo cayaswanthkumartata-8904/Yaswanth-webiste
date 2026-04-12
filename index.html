@@ -17,12 +17,48 @@ body {
     font-family: 'Segoe UI', Arial;
     margin:0;
     color:var(--text-dark);
+    padding-top:70px; /* added for navbar */
 }
 
 .container {
     max-width:1100px;
     margin:auto;
     padding:20px;
+}
+
+/* NAVBAR (ADDED ONLY) */
+.top-nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#f1f5f9;
+    box-shadow:0 2px 6px rgba(0,0,0,0.05);
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:15px 0;
+}
+
+.nav-container a{
+    text-decoration:none;
+    color:#475569;
+    font-size:16px;
+    font-weight:500;
+}
+
+.nav-container a:hover{
+    color:#1e3a8a;
+}
+
+.nav-container .active{
+    color:#2563eb;
+    font-weight:600;
 }
 
 /* HERO */
@@ -39,7 +75,6 @@ body {
     gap:1.5rem;
 }
 
-/* FIXED IMAGE */
 .profile-img {
     width:130px;
     height:130px;
@@ -57,7 +92,6 @@ body {
     margin:4px 0;
 }
 
-/* BUTTON */
 .btn {
     padding:10px 18px;
     border-radius:6px;
@@ -100,250 +134,7 @@ body {
     border-radius:8px;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-    .hero-flex{flex-direction:column;text-align:center;}
-    .about-grid{grid-template-columns:1fr;}
-}
-</style>
-</head>
-
-<body>
-
-<!-- HERO -->
-<header class="hero">
-    <nav class="nav">
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Journey</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-<div class="container hero-flex">
-
-<img src="https://i.ibb.co/mF6cPVLH/profile-png.png" class="profile-img">
-
-<div class="hero-text">
-<h1>Tata Yaswanth Kumar</h1>
-
-<p>Chartered Accountant | AI & Automation Enthusiast | Corporate Trainer</p>
-<p style="opacity:0.9;">Finance • Innovation • Strategic Planning</p>
-
-<!-- ONLY DOWNLOAD BUTTON -->
-<a href="https://drive.google.com/uc?export=download&id=1am67MsmFF-ErCztU5puM-2-qcEfvTYmO" 
-   class="btn btn-primary">
-   Download Resume
-</a>
-
-</div>
-
-</div>
-</header>
-
-<!-- ABOUT -->
-<section class="about">
-<div class="container about-grid">
-
-<!-- LEFT -->
-<div>
-
-<div class="about-box">
-<h3>📍 Origin Story</h3>
-<p>
-Born in Singarayakonda, Ongole (Andhra Pradesh), I have a strong passion for solving complex problems—whether in academic, professional, or personal settings. I continuously seek opportunities to learn and grow, preferring new challenges over routine tasks. I enjoy exploring new ideas and building meaningful connections that broaden my perspective.
-</p>
-</div>
-
-<div class="about-box">
-<h3>📈 Career Evolution</h3>
-<p>
-My transition into Chartered Accountancy was driven by a deep interest in understanding how businesses operate. Over the years, I have progressed from core accounting to FP&A and automation within global MNC environments. I am passionate about analyzing business models, understanding operational dynamics, and addressing organizational challenges.
-</p>
-</div>
-
-<div class="about-box">
-<h3>💡 What I Value</h3>
-<p><b>Learning by doing</b> — SAP, Power BI, VBA</p>
-<p><b>Process excellence</b> — smarter ways of working</p>
-<p><b>People & leadership</b> — training and collaboration</p>
-</div>
-
-</div>
-
-<!-- RIGHT -->
-<div class="expertise">
-<h3>Core Expertise</h3>
-
-<div class="expertise-card">
-<b>Financial Operations</b><br>
-Accounting Payables, Month-End Closures, FP&A, Budgeting, Cost Optimization, Financial Reporting
-</div>
-
-<div class="expertise-card">
-<b>Enterprise Systems</b><br>
-SAP, Essbase, OneStream, Oracle, Tally
-</div>
-
-<div class="expertise-card">
-<b>Automation & Insights</b><br>
-Power BI, VBA, Automation
-</div>
-
-<div class="expertise-card">
-<b>Taxation & Accounting</b><br>
-Income Tax, Indirect Tax
-</div>
-
-</div>
-
-</div>
-</section>
-
-</body>
-</html><!DOCTYPE html>
-
-<!-- EXPERIENCE -->
-<section class="experience">
-<div class="container">
-
-<h2 class="section-title">Professional Experience</h2>
-
-<div class="timeline">
-
-<!-- CARD -->
-<div class="exp-card">
-    <div class="exp-header" onclick="toggleCard(this)">
-        <div>
-            <div class="role">Assistant Manager – FP&A</div>
-            <div class="company">Thomson Reuters | Hyderabad, IN</div>
-        </div>
-        <div class="right">
-            <span class="duration">May 2025 – Present</span>
-            <button class="expand-btn">View Details</button>
-        </div>
-    </div>
-
-    <div class="exp-body">
-        <ul>
-<li>Managed the monthly consolidation and finalization of sales and revenue for the Legal Products portfolio with approximately $750M annual revenue, analyzing trends in sales volumes, pricing, and cancellations to ensure accurate reporting.</li>
-<li>Performed monthly revenue close activities, including preparation and posting of accrual and deferral journal entries, ensuring compliance with accounting policies and reporting timelines.</li>
-<li>Delivered detailed variance analysis between actual revenue and forecast, providing structured commentary to business stakeholders and highlighting key drivers such as sales performance, pricing changes, and cancellation trends.</li>
-<li>Supported year-end financial planning and restatement activities, ensuring accurate alignment between historical financials, forecast assumptions, and annual planning outputs.</li>
-<li>Prepared financial insights and supporting schedules for Quarterly Business Reviews (QBR) and Operations & Revenue (O&R) reviews, enabling senior leadership to evaluate performance against targets.</li>
-<li>Coordinated forecast inputs across multiple functions and business units, consolidating key assumptions, business drivers, and financial metrics to produce an integrated revenue outlook.</li>
-<li>Project Management: Led the cross-functional implementation of the One-Stream budgeting and forecasting platform, improving forecasting accuracy, data transparency, and process efficiency across FP&A teams.</li>
-<li>Presented financial insights and business performance analysis to senior management, supporting data-driven decision making.</li>
-<li>Leadership: Supervised and mentored a team of senior analysts, providing direction on financial analysis, forecasting processes, and reporting deliverables.</li>
-<li>Acted as a segment-level financial consolidator, facilitating team meetings to align forecasts, resolve reporting issues, and share best practices across the FP&A organization.</li>
-<li>Developed process automation solutions using One-Stream and semantic data models, reducing manual effort and improving productivity within reporting and forecasting cycles.</li>
-<li>Built predictive forecasting models to identify revenue trends and support proactive strategic decisions by the leadership team.</li>
-        </ul>
-    </div>
-</div>
-
-<!-- LENNOX -->
-<div class="exp-card">
-    <div class="exp-header" onclick="toggleCard(this)">
-        <div>
-            <div class="role">Lead Financial Analyst</div>
-            <div class="company">Lennox International | Chennai, IN</div>
-        </div>
-        <div class="right">
-            <span class="duration">Jun 2023 – Mar 2025</span>
-            <button class="expand-btn">View Details</button>
-        </div>
-    </div>
-
-    <div class="exp-body">
-<ul>
-<li>Oversaw annual budgeting process from start to finish, collaborating closely with department heads to align resources with strategic priorities</li>
-<li>Played an instrumental role in Long range plan development by working closely with department heads to establish realistic projections based on historical data analysis before sending it to the US corporate FP&A team.</li>
-<li>Managed a team of junior analysts, fostering professional development through mentorship and targeted training programs.</li>
-<li>Connecting with department leads for projects expense forecast, headcount forecasts and related relocation</li>
-<li>Collaborated with cross-functional teams to develop budgets and monitor spending, ensuring alignment with corporate goals and objectives.</li>
-<li>Done 4 Power BI Projects on real time basis with out any IT support</li>
-<li>Preparation of accrual report for all departments at end of month by connecting with cost center owners and sending it to accounting team for posting.</li>
-<li>Cross charge the R&D Expense to the segments on the basis of defined metrics.</li>
-<li>Reclass the entry's to Profit & loss account from projects expense when ever required.</li>
-</ul>
-    </div>
-</div>
-
-<!-- PEPSICO -->
-<div class="exp-card">
-    <div class="exp-header" onclick="toggleCard(this)">
-        <div>
-            <div class="role">Associate Manager</div>
-            <div class="company">PepsiCo | Hyderabad, IN</div>
-        </div>
-        <div class="right">
-            <span class="duration">Sep 2019 – Jun 2023</span>
-            <button class="expand-btn">View Details</button>
-        </div>
-    </div>
-
-    <div class="exp-body">
-<ul>
-<li>Preparation of AOP in line with strategic decisions set by management.</li>
-<li>Monthly forecast need to be submitted for each customer with the recent inputs received from customer manger and sales orders trends .</li>
-<li>Forecasting and planning under multiple environmental scenarios like sensitivity analysis</li>
-<li>To take part of monthly close activities and ensure to book the correct amount of accruals</li>
-<li>Connect with customers managers and customers to understand the business needs,based on that we need to implement promotions based on the requirements</li>
-<li>Approving trade promotions in sap based on the pricing sheets prepared and agreed with customer manager.</li>
-<li>Responsible for the period end closure and preparation of forecast.</li>
-<li>Preparation and data presentation of monthly/quarterly dashboards</li>
-<li>Working across multiple Finance functions to deliver Period forecast</li>
-<li>Performed on financial and budget analyses to justify requested funding .</li>
-<li>Work on key region/customer initiatives to drive business and region performance</li>
-<li>Performance analysis, including explanation of variance to plan, forecast and year ago</li>
-<li>Create Customer promotions to support business partners</li>
-<li>Manage exceptions through verbal and written interactions with Sales and Sales Finance</li>
-<li>Trade accrual process including quarterly liability review</li>
-<li>Collaborate with sales and finance functions on ad-hoc projects</li>
-<li>Collect the data from market and analyze the effectiveness of promos.</li>
-<li>price sensitivity analysis based on market data and connecting with customer manager and commerical team to fix on price points</li>
-<li>Need to Analyze AOP VS Actuals on monthly basis variance need to be explained in detail.</li>
-<li>Taking white board sessions to new team members explaining process overview.</li>
-</ul>
-    </div>
-</div>
-
-<!-- ACCENTURE -->
-<div class="exp-card">
-    <div class="exp-header" onclick="toggleCard(this)">
-        <div>
-            <div class="role">Financial Analyst</div>
-            <div class="company">Accenture | Bengaluru, IN</div>
-        </div>
-        <div class="right">
-            <span class="duration">Mar 2018 – May 2019</span>
-            <button class="expand-btn">View Details</button>
-        </div>
-    </div>
-
-    <div class="exp-body">
-<ul>
-<li>Preparation of forecast reports involving forecasting revenue and understanding the business trends</li>
-<li>Working with Business Managers to measure performance of contracts</li>
-<li>Analysis of variances of forecast and actuals.</li>
-<li>Help Managers in Pricing of deals, understanding various costs and cost rates.</li>
-<li>Perform revenue and expense analysis with reports from Sap and other tools.</li>
-<li>Analyzing variances between actual revenue and expenses with forecasted numbers and providing detailed explanation for variance</li>
-<li>Ad-hoc reports and analysis based on request</li>
-<li>Develop, maintain, and provide routine and ad-hoc reports to management that deliver visibility to financial results and trends</li>
-<li>Analyze periodic results, comparing actual and year-to-date performance with prior periods, forecasts, and plans.</li>
-</ul>
-    </div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- STYLE -->
-<style>
+/* EXPERIENCE */
 .section-title{
     font-size:28px;
     margin-bottom:30px;
@@ -419,9 +210,117 @@ Income Tax, Indirect Tax
 .exp-card.active .exp-body{
     display:block;
 }
-</style>
 
-<!-- SCRIPT -->
+/* MOBILE */
+@media(max-width:768px){
+    .hero-flex{flex-direction:column;text-align:center;}
+    .about-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR (ADDED) -->
+<header class="top-nav">
+    <div class="nav-container">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Journey</a>
+        <a href="#projects">Projects</a>
+        <a href="#leadership" class="active">Leadership</a>
+    </div>
+</header>
+
+<!-- HERO -->
+<header class="hero" id="home">
+<div class="container hero-flex">
+
+<img src="https://i.ibb.co/mF6cPVLH/profile-png.png" class="profile-img">
+
+<div class="hero-text">
+<h1>Tata Yaswanth Kumar</h1>
+
+<p>Chartered Accountant | AI & Automation Enthusiast | Corporate Trainer</p>
+<p style="opacity:0.9;">Finance • Innovation • Strategic Planning</p>
+
+<a href="https://drive.google.com/uc?export=download&id=1am67MsmFF-ErCztU5puM-2-qcEfvTYmO" 
+   class="btn btn-primary">
+   Download Resume
+</a>
+
+</div>
+</div>
+</header>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+<div class="container about-grid">
+
+<div>
+<div class="about-box">
+<h3>📍 Origin Story</h3>
+<p>Born in Singarayakonda, Ongole (Andhra Pradesh)...</p>
+</div>
+
+<div class="about-box">
+<h3>📈 Career Evolution</h3>
+<p>My transition into Chartered Accountancy...</p>
+</div>
+
+<div class="about-box">
+<h3>💡 What I Value</h3>
+<p><b>Learning by doing</b> — SAP, Power BI, VBA</p>
+<p><b>Process excellence</b> — smarter ways of working</p>
+<p><b>People & leadership</b> — training and collaboration</p>
+</div>
+</div>
+
+<div class="expertise">
+<h3>Core Expertise</h3>
+<div class="expertise-card"><b>Financial Operations</b></div>
+<div class="expertise-card"><b>Enterprise Systems</b></div>
+<div class="expertise-card"><b>Automation & Insights</b></div>
+<div class="expertise-card"><b>Taxation & Accounting</b></div>
+</div>
+
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+<div class="container">
+
+<h2 class="section-title">Professional Experience</h2>
+
+<div class="timeline">
+
+<div class="exp-card">
+<div class="exp-header" onclick="toggleCard(this)">
+<div>
+<div class="role">Assistant Manager – FP&A</div>
+<div class="company">Thomson Reuters | Hyderabad, IN</div>
+</div>
+<div class="right">
+<span class="duration">May 2025 – Present</span>
+<button class="expand-btn">View Details</button>
+</div>
+</div>
+
+<div class="exp-body">
+<ul>
+<li>Managed the monthly consolidation and finalization of sales and revenue...</li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="projects"></section>
+<section id="leadership"></section>
+
 <script>
 function toggleCard(header){
     const card = header.parentElement;
@@ -429,3 +328,5 @@ function toggleCard(header){
 }
 </script>
 
+</body>
+</html>
