@@ -6,28 +6,12 @@
 <title>Yaswanth Kumar | Finance Professional</title>
 
 <style>
-:root {
-    --primary-blue:#1e3a8a;
-    --accent-blue:#3b82f6;
-    --light-bg:#f1f5f9;
-    --text-dark:#1e293b;
-}
+body {font-family:Arial; margin:0;}
 
-body {
-    font-family: 'Segoe UI', Arial;
-    margin:0;
-    color:var(--text-dark);
-}
+.container {max-width:1100px; margin:auto; padding:20px;}
 
-.container {
-    max-width:1100px;
-    margin:auto;
-    padding:20px;
-}
-
-/* HERO */
 .hero {
-    background: linear-gradient(135deg, var(--primary-blue), #1e1b4b);
+    background:linear-gradient(135deg,#1e3a8a,#1e1b4b);
     color:white;
     padding:60px 0;
 }
@@ -36,74 +20,53 @@ body {
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:1.5rem;
+    gap:20px;
 }
 
-/* FIXED IMAGE */
 .profile-img {
     width:130px;
     height:130px;
     border-radius:50%;
     object-fit:cover;
     object-position:center top;
-    border:3px solid white;
 }
 
-.hero-text h1 {
-    margin-bottom:5px;
-}
-
-.hero-text p {
-    margin:4px 0;
-}
-
-/* BUTTON */
 .btn {
-    padding:10px 18px;
-    border-radius:6px;
+    padding:10px 15px;
+    background:white;
+    color:#1e3a8a;
     text-decoration:none;
     display:inline-block;
     margin-top:10px;
+    border-radius:5px;
 }
 
-.btn-primary {
-    background:white;
-    color:var(--primary-blue);
+.icons a {
+    margin-right:10px;
+    font-size:20px;
+    text-decoration:none;
 }
 
-/* ABOUT */
-.about {
-    background:var(--light-bg);
+/* EXPERIENCE */
+.experience {
     padding:50px 0;
 }
 
-.about-grid {
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:2rem;
-}
-
-.about-box {
-    margin-bottom:20px;
-}
-
-.expertise {
-    background:#dbeafe;
-    padding:20px;
-    border-radius:10px;
-}
-
-.expertise-card {
-    background:white;
-    padding:12px;
-    margin-bottom:10px;
+.exp-card {
+    border:1px solid #ddd;
+    padding:15px;
+    margin-bottom:15px;
     border-radius:8px;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-    .hero-flex{flex-direction:column;text-align:center;}
-    .about-grid{grid-template-columns:1fr;}
+.hidden {
+    display:none;
+}
+
+button {
+    margin-top:10px;
+    padding:6px 12px;
+    cursor:pointer;
 }
 </style>
 </head>
@@ -116,81 +79,131 @@ body {
 
 <img src="https://i.ibb.co/mF6cPVLH/profile-png.png" class="profile-img">
 
-<div class="hero-text">
-<h1>Tata Yaswanth Kumar</h1>
-
+<div>
+<h2>Tata Yaswanth Kumar</h2>
 <p>Chartered Accountant | AI & Automation Enthusiast | Corporate Trainer</p>
-<p style="opacity:0.9;">Finance • Innovation • Strategic Planning</p>
+<p>Finance • Innovation • Strategic Planning</p>
 
-<!-- ONLY DOWNLOAD BUTTON -->
-<a href="https://drive.google.com/uc?export=download&id=1am67MsmFF-ErCztU5puM-2-qcEfvTYmO" 
-   class="btn btn-primary">
-   Download Resume
+<a href="https://drive.google.com/uc?export=download&id=1am67MsmFF-ErCztU5puM-2-qcEfvTYmO" class="btn">
+Download Resume
 </a>
 
+<div class="icons">
+<a href="https://www.linkedin.com/in/cayaswanthkumartata" target="_blank">🔗</a>
+<a href="mailto:cayaswanthkumartata@gmail.com">✉️</a>
 </div>
 
+</div>
 </div>
 </header>
 
-<!-- ABOUT -->
-<section class="about">
-<div class="container about-grid">
+<!-- EXPERIENCE -->
+<section class="experience">
+<div class="container">
 
-<!-- LEFT -->
-<div>
+<h2>Professional Journey</h2>
 
-<div class="about-box">
-<h3>📍 Origin Story</h3>
+<!-- EXPERIENCE 1 -->
+<div class="exp-card">
+<h3>Assistant Manager – Thomson Reuters (2025–Present)</h3>
+
+<div id="exp1-short">
+<p>Managing revenue consolidation (~$750M), forecasting, and FP&A processes.</p>
+</div>
+
+<div id="exp1-full" class="hidden">
 <p>
-Born in Singarayakonda, Ongole (Andhra Pradesh), I have a strong passion for solving complex problems—whether in academic, professional, or personal settings. I continuously seek opportunities to learn and grow, preferring new challenges over routine tasks. I enjoy exploring new ideas and building meaningful connections that broaden my perspective.
+• Managed $750M revenue portfolio and forecasting<br>
+• Revenue close, accruals & deferrals<br>
+• Variance analysis & stakeholder reporting<br>
+• Led OneStream implementation<br>
+• Built predictive forecasting models<br>
+• Managed team & automation initiatives
 </p>
 </div>
 
-<div class="about-box">
-<h3>📈 Career Evolution</h3>
+<button onclick="toggle('exp1')">Show More</button>
+</div>
+
+<!-- EXPERIENCE 2 -->
+<div class="exp-card">
+<h3>Lead Financial Analyst – Lennox (2023–2025)</h3>
+
+<div id="exp2-short">
+<p>Led budgeting, forecasting and Power BI reporting initiatives.</p>
+</div>
+
+<div id="exp2-full" class="hidden">
 <p>
-My transition into Chartered Accountancy was driven by a deep interest in understanding how businesses operate. Over the years, I have progressed from core accounting to FP&A and automation within global MNC environments. I am passionate about analyzing business models, understanding operational dynamics, and addressing organizational challenges.
+• Annual budgeting & long-range planning<br>
+• Managed analyst team<br>
+• Power BI dashboard development<br>
+• Expense forecasting & accrual reporting<br>
+• Cross-functional financial planning
 </p>
 </div>
 
-<div class="about-box">
-<h3>💡 What I Value</h3>
-<p><b>Learning by doing</b> — SAP, Power BI, VBA</p>
-<p><b>Process excellence</b> — smarter ways of working</p>
-<p><b>People & leadership</b> — training and collaboration</p>
+<button onclick="toggle('exp2')">Show More</button>
 </div>
 
+<!-- EXPERIENCE 3 -->
+<div class="exp-card">
+<h3>Associate Manager – PepsiCo (2019–2023)</h3>
+
+<div id="exp3-short">
+<p>Handled forecasting, promotions and variance analysis.</p>
 </div>
 
-<!-- RIGHT -->
-<div class="expertise">
-<h3>Core Expertise</h3>
-
-<div class="expertise-card">
-<b>Financial Operations</b><br>
-Accounting Payables, Month-End Closures, FP&A, Budgeting, Cost Optimization, Financial Reporting
+<div id="exp3-full" class="hidden">
+<p>
+• AOP & forecasting<br>
+• Pricing & promotions strategy<br>
+• Trade accruals & variance analysis<br>
+• Customer & sales collaboration<br>
+• Dashboard reporting
+</p>
 </div>
 
-<div class="expertise-card">
-<b>Enterprise Systems</b><br>
-SAP, Essbase, OneStream, Oracle, Tally
+<button onclick="toggle('exp3')">Show More</button>
 </div>
 
-<div class="expertise-card">
-<b>Automation & Insights</b><br>
-Power BI, VBA, Automation
+<!-- EXPERIENCE 4 -->
+<div class="exp-card">
+<h3>Financial Analyst – Accenture (2018–2019)</h3>
+
+<div id="exp4-short">
+<p>Focused on forecasting, variance and pricing analysis.</p>
 </div>
 
-<div class="expertise-card">
-<b>Taxation & Accounting</b><br>
-Income Tax, Indirect Tax
+<div id="exp4-full" class="hidden">
+<p>
+• Revenue forecasting & variance analysis<br>
+• Pricing support<br>
+• Financial reporting & dashboards<br>
+• Business performance analysis
+</p>
 </div>
 
+<button onclick="toggle('exp4')">Show More</button>
 </div>
 
 </div>
 </section>
+
+<script>
+function toggle(id){
+    let full = document.getElementById(id+'-full');
+    let btn = event.target;
+
+    if(full.style.display === "none" || full.style.display === ""){
+        full.style.display = "block";
+        btn.innerText = "Show Less";
+    } else {
+        full.style.display = "none";
+        btn.innerText = "Show More";
+    }
+}
+</script>
 
 </body>
 </html>
