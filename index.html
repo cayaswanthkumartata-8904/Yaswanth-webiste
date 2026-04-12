@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial;
+    font-family:'Segoe UI', Arial;
     margin:0;
     color:var(--text-dark);
 }
@@ -44,24 +44,18 @@ body {
     height:130px;
     border-radius:50%;
     object-fit:cover;
-    object-position:center top;
     border:3px solid white;
 }
 
 .hero-text h1 { margin-bottom:5px; }
 .hero-text p { margin:4px 0; }
 
-/* BUTTON */
 .btn {
     padding:10px 18px;
     border-radius:6px;
     text-decoration:none;
     display:inline-block;
     margin-top:10px;
-    cursor:pointer;
-}
-
-.btn-primary {
     background:white;
     color:var(--primary-blue);
 }
@@ -78,8 +72,6 @@ body {
     gap:2rem;
 }
 
-.about-box { margin-bottom:20px; }
-
 .expertise {
     background:#dbeafe;
     padding:20px;
@@ -93,44 +85,92 @@ body {
     border-radius:8px;
 }
 
-/* EXPERIENCE */
+/* EXPERIENCE TIMELINE */
 .experience {
-    padding:50px 0;
+    padding:60px 0;
+    background:#f8fafc;
+}
+
+.timeline {
+    position:relative;
+    margin-left:20px;
+    padding-left:20px;
+    border-left:3px solid #c7d2fe;
 }
 
 .exp-card {
     background:white;
-    padding:20px;
-    border-radius:10px;
-    margin-bottom:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    padding:25px;
+    border-radius:16px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    cursor:pointer;
+    transition:0.3s;
+    position:relative;
 }
 
-.exp-header {
-    font-weight:bold;
-    font-size:18px;
-    margin-bottom:5px;
+.exp-card:hover {
+    transform:translateY(-3px);
 }
 
-.exp-sub {
-    color:gray;
-    font-size:14px;
-    margin-bottom:10px;
+.exp-card::before {
+    content:"";
+    position:absolute;
+    left:-32px;
+    top:30px;
+    width:14px;
+    height:14px;
+    background:#3b82f6;
+    border-radius:50%;
+    border:3px solid white;
+}
+
+.exp-top {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.role {
+    font-size:20px;
+    font-weight:600;
+}
+
+.company {
+    color:#2563eb;
+}
+
+.duration {
+    background:#dbeafe;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+.expand-icon {
+    font-size:22px;
+    color:#2563eb;
 }
 
 .exp-content {
-    display:none;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
     margin-top:10px;
-    line-height:1.6;
 }
 
-.toggle-btn {
-    background:var(--accent-blue);
-    color:white;
-    border:none;
-    padding:6px 12px;
-    border-radius:5px;
-    font-size:13px;
+.exp-content ul {
+    padding-left:18px;
+    line-height:1.7;
+}
+
+.exp-card.active .exp-content {
+    max-height:600px;
+}
+
+.exp-card.active .expand-icon {
+    transform:rotate(45deg);
 }
 
 /* MOBILE */
@@ -151,15 +191,14 @@ body {
 
 <div class="hero-text">
 <h1>Tata Yaswanth Kumar</h1>
-<p>Chartered Accountant | AI & Automation Enthusiast | Corporate Trainer</p>
-<p style="opacity:0.9;">Finance • Innovation • Strategic Planning</p>
+<p>Chartered Accountant | AI & Automation Enthusiast</p>
+<p>Finance • FP&A • Strategic Planning</p>
 
-<a href="https://drive.google.com/uc?export=download&id=1am67MsmFF-ErCztU5puM-2-qcEfvTYmO" 
-   class="btn btn-primary">
-   Download Resume
+<a href="https://drive.google.com/uc?export=download&id=1am67MsmFF-ErCztU5puM-2-qcEfvTYmO" class="btn">
+Download Resume
 </a>
-
 </div>
+
 </div>
 </header>
 
@@ -168,50 +207,20 @@ body {
 <div class="container about-grid">
 
 <div>
-<div class="about-box">
-<h3>📍 Origin Story</h3>
+<h3>Career Summary</h3>
 <p>
-Born in Singarayakonda, Ongole (Andhra Pradesh), I have a strong passion for solving complex problems...
+Chartered Accountant with strong experience in FP&A, revenue forecasting,
+budgeting, and financial transformation across MNCs.
 </p>
-</div>
-
-<div class="about-box">
-<h3>📈 Career Evolution</h3>
-<p>
-Progressed from core accounting to FP&A and automation within global MNC environments...
-</p>
-</div>
-
-<div class="about-box">
-<h3>💡 What I Value</h3>
-<p><b>Learning by doing</b> — SAP, Power BI, VBA</p>
-<p><b>Process excellence</b> — smarter ways of working</p>
-<p><b>People & leadership</b> — training and collaboration</p>
-</div>
 </div>
 
 <div class="expertise">
 <h3>Core Expertise</h3>
 
-<div class="expertise-card">
-<b>Financial Operations</b><br>
-FP&A, Budgeting, Forecasting, Variance Analysis, Month-End Closures
-</div>
-
-<div class="expertise-card">
-<b>Enterprise Systems</b><br>
-SAP, Essbase, OneStream, Oracle
-</div>
-
-<div class="expertise-card">
-<b>Automation & Insights</b><br>
-Power BI, VBA, Data Automation
-</div>
-
-<div class="expertise-card">
-<b>Taxation & Accounting</b><br>
-Direct Tax, Indirect Tax, IND-AS
-</div>
+<div class="expertise-card">FP&A, Budgeting, Forecasting</div>
+<div class="expertise-card">SAP, OneStream, Essbase</div>
+<div class="expertise-card">Power BI, Automation</div>
+<div class="expertise-card">Taxation & Accounting</div>
 
 </div>
 
@@ -224,120 +233,95 @@ Direct Tax, Indirect Tax, IND-AS
 
 <h2>Professional Experience</h2>
 
-<!-- THOMSON REUTERS -->
-<div class="exp-card">
+<div class="timeline">
+
+<div class="exp-card" onclick="toggleCard(this)">
 <div class="exp-top">
-    <div>
-        <div class="company">Thomson Reuters</div>
-        <div class="role">Assistant Manager</div>
-    </div>
-    <div class="duration">May 2025 – Present</div>
+<div>
+<div class="role">Assistant Manager – FP&A</div>
+<div class="company">Thomson Reuters</div>
 </div>
-
-<button class="toggle-btn" onclick="toggleExp(this)">View Details</button>
-
+<div class="duration">May 2025 – Present</div>
+<div class="expand-icon">+</div>
+</div>
 <div class="exp-content">
 <ul>
-<li>Managed monthly consolidation and finalization of ~$750M Legal Products revenue, analyzing sales, pricing, and cancellations</li>
-<li>Performed revenue close activities including accruals and deferrals</li>
-<li>Delivered variance analysis vs forecast with key drivers (sales, pricing, cancellations)</li>
-<li>Supported year-end planning and restatement activities</li>
-<li>Prepared QBR and O&R review insights for leadership</li>
-<li>Consolidated forecast inputs across business units</li>
-<li>Led OneStream implementation improving forecasting accuracy and efficiency</li>
-<li>Presented financial insights to senior management</li>
-<li>Supervised and mentored senior analysts</li>
-<li>Acted as segment-level consolidator aligning FP&A teams</li>
-<li>Developed automation solutions using OneStream</li>
+<li>Managed $750M revenue consolidation</li>
+<li>Performed revenue close (accruals & deferrals)</li>
+<li>Delivered variance analysis</li>
+<li>Led OneStream implementation</li>
 <li>Built predictive forecasting models</li>
 </ul>
 </div>
 </div>
 
-<!-- LENNOX -->
-<div class="exp-card">
+<div class="exp-card" onclick="toggleCard(this)">
 <div class="exp-top">
-    <div>
-        <div class="company">Lennox International</div>
-        <div class="role">Lead Financial Analyst</div>
-    </div>
-    <div class="duration">Jun 2023 – Mar 2025</div>
+<div>
+<div class="role">Lead Financial Analyst</div>
+<div class="company">Lennox</div>
 </div>
-
-<button class="toggle-btn" onclick="toggleExp(this)">View Details</button>
-
+<div class="duration">Jun 2023 – Mar 2025</div>
+<div class="expand-icon">+</div>
+</div>
 <div class="exp-content">
 <ul>
-<li>Owned annual budgeting and long-range planning process</li>
-<li>Worked with US corporate FP&A for projections</li>
-<li>Managed team of analysts and provided training</li>
-<li>Forecasted project expenses, headcount, and relocation</li>
-<li>Built 4 Power BI dashboards independently</li>
-<li>Prepared accrual reports and coordinated with accounting</li>
-<li>Cross-charged R&D expenses across segments</li>
-<li>Handled P&L reclassification entries</li>
+<li>Owned budgeting & long-range planning</li>
+<li>Managed FP&A team</li>
+<li>Built Power BI dashboards</li>
+<li>Handled accruals & cost allocations</li>
 </ul>
 </div>
 </div>
 
-<!-- PEPSICO -->
-<div class="exp-card">
+<div class="exp-card" onclick="toggleCard(this)">
 <div class="exp-top">
-    <div>
-        <div class="company">PepsiCo</div>
-        <div class="role">Associate Manager</div>
-    </div>
-    <div class="duration">Sep 2019 – Jun 2023</div>
+<div>
+<div class="role">Associate Manager</div>
+<div class="company">PepsiCo</div>
 </div>
-
-<button class="toggle-btn" onclick="toggleExp(this)">View Details</button>
-
+<div class="duration">Sep 2019 – Jun 2023</div>
+<div class="expand-icon">+</div>
+</div>
 <div class="exp-content">
 <ul>
-<li>Prepared AOP aligned with strategic decisions</li>
-<li>Delivered monthly customer-level forecasts</li>
-<li>Performed scenario and sensitivity analysis</li>
-<li>Managed accruals and period-end closure</li>
-<li>Collaborated with customer managers for promotions</li>
-<li>Approved trade promotions in SAP</li>
-<li>Prepared dashboards and performance reports</li>
-<li>Delivered variance analysis vs plan and LY</li>
-<li>Worked across finance functions for forecasting</li>
-<li>Conducted financial justification for funding</li>
-<li>Managed regional/customer performance initiatives</li>
-<li>Handled trade accruals and liability reviews</li>
-<li>Performed price sensitivity analysis</li>
-<li>Trained new team members</li>
+<li>AOP & forecasting</li>
+<li>Trade promotions & pricing</li>
+<li>Variance analysis</li>
+<li>Dashboard reporting</li>
 </ul>
 </div>
 </div>
 
-<!-- ACCENTURE -->
-<div class="exp-card">
+<div class="exp-card" onclick="toggleCard(this)">
 <div class="exp-top">
-    <div>
-        <div class="company">Accenture</div>
-        <div class="role">Financial Analyst</div>
-    </div>
-    <div class="duration">Mar 2018 – May 2019</div>
+<div>
+<div class="role">Financial Analyst</div>
+<div class="company">Accenture</div>
 </div>
-
-<button class="toggle-btn" onclick="toggleExp(this)">View Details</button>
-
+<div class="duration">Mar 2018 – May 2019</div>
+<div class="expand-icon">+</div>
+</div>
 <div class="exp-content">
 <ul>
-<li>Prepared revenue forecasts and analyzed business trends</li>
-<li>Worked with managers to evaluate contract performance</li>
-<li>Performed variance analysis (forecast vs actuals)</li>
-<li>Supported deal pricing and cost analysis</li>
-<li>Delivered revenue and expense analysis using SAP</li>
-<li>Created management reports and dashboards</li>
-<li>Analyzed YTD vs plan and prior periods</li>
-<li>Handled ad-hoc financial analysis requests</li>
+<li>Revenue forecasting</li>
+<li>Variance analysis</li>
+<li>Deal pricing support</li>
+<li>Management reporting</li>
 </ul>
 </div>
 </div>
 
+</div>
 </div>
 </section>
-    
+
+<!-- SCRIPT -->
+<script>
+function toggleCard(card) {
+    card.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
